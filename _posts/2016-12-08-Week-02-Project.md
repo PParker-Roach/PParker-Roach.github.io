@@ -2,8 +2,6 @@
 layout: post
 title: Week 2 Project Blog
 ---
-
-
 # Project 2
 ## Step 1: Exploring your data.
 
