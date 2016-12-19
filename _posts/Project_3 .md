@@ -1,7 +1,3 @@
----
-layout: post
-title: Week 3 Project Blog
----
 
 
 # Scenario 1: State tax board
@@ -26,11 +22,11 @@ Challenging Bonus: We did not cover the topics of regularization for linear regr
 ### Tips for both scenarios:
    Likely you will find it useful to reduce the data set with pandas before fitting models. You may want to make a new table with the following data for each store:
    will turn <font color = 'red'>red</font> when done
-
-
+   
+  
   <font color = 'red'>
   * The vendor name (really vendor number)?
-
+ 
   * The location data (zip code, county, city)
   </font>
    <span style="color:red"></span>
@@ -42,7 +38,7 @@ Challenging Bonus: We did not cover the topics of regularization for linear regr
     * The total volume sold
     * The total number of bottles sold
     * The average price per bottle (perhaps useful for distinguishing store types)
-
+  
 
 We're using linear regression for our models. Find the best model you can, but don't fret if you cannot get a really good model. We'll learn techniques later that will help improve your analysis, such as classifying store types. For now do the best you can with the tools that you have.
 
@@ -65,7 +61,7 @@ Once you've chosen your scenario, download the data from [the Iowa website](http
 
   1. load in data
   * convert from string to data format
-  * create new dataframe
+  * create new dataframe 
     * with subset of data
     * with added columns with relevant transformations for use down the road
       * indexed by Store
@@ -81,7 +77,7 @@ The Iowa State Legislature is contemplating changing the State's liquor tax rate
 
 # Goals
   * Provide graphs plotting total State liquor sales from 2012-2015
-  *
+  * 
 
 # Acquire the data
 
@@ -106,12 +102,12 @@ df = df.sample(n=200)
            'State Bottle Retail', 'Bottles Sold', 'Sale (Dollars)',
            'Volume Sold (Liters)', 'Volume Sold (Gallons)'],
           dtype='object')
-
+    
 
 Likely you will find it useful to reduce the data set with pandas before fitting models. You may want to make a new table with the following data for each store: will turn red when done
 
 The vendor name (really vendor number)
-The location data (zip code, county, city)
+The location data (zip code, county, city) 
 The total sales for the year
 need to create a new column for the year
 The total sales for each month (or at least for Jan-March for the first scenario)
@@ -125,7 +121,7 @@ The average price per bottle (perhaps useful for distinguishing store types)
 # Create a new 'store-centric' dataframe
 store_names = df["Store Number"].unique()
 
-column_names = ["Zip Code",
+column_names = ["Zip Code", 
                             "County",
                             "City",
                             "Sales_Annual_2012",
@@ -137,11 +133,11 @@ column_names = ["Zip Code",
                             "Sales_Mar_2015",
                             "Sales_Apr_2015",
                             "Sales_May_2015",
-                            "Sales_Jun_2015",
-                            "Sales_Jul_2015",
-                            "Sales_Aug_2015",
-                            "Sales_Sep_2015",
-                            "Sales_Oct_2015",
+                            "Sales_Jun_2015", 
+                            "Sales_Jul_2015", 
+                            "Sales_Aug_2015", 
+                            "Sales_Sep_2015", 
+                            "Sales_Oct_2015", 
                             "Sales_Nov_2015",
                             "Sales_Dec_2015",
                             "Sales_Jan_2016",
@@ -158,11 +154,11 @@ stores[["Sales_Annual_2012","Sales_Annual_2013",
                             "Sales_Mar_2015",
                             "Sales_Apr_2015",
                             "Sales_May_2015",
-                            "Sales_Jun_2015",
-                            "Sales_Jul_2015",
-                            "Sales_Aug_2015",
-                            "Sales_Sep_2015",
-                            "Sales_Oct_2015",
+                            "Sales_Jun_2015", 
+                            "Sales_Jul_2015", 
+                            "Sales_Aug_2015", 
+                            "Sales_Sep_2015", 
+                            "Sales_Oct_2015", 
                             "Sales_Nov_2015",
                             "Sales_Dec_2015",
                             "Sales_Jan_2016",
@@ -178,11 +174,11 @@ stores[["Sales_Annual_2012","Sales_Annual_2013",
                             "Sales_Mar_2015",
                             "Sales_Apr_2015",
                             "Sales_May_2015",
-                            "Sales_Jun_2015",
-                            "Sales_Jul_2015",
-                            "Sales_Aug_2015",
-                            "Sales_Sep_2015",
-                            "Sales_Oct_2015",
+                            "Sales_Jun_2015", 
+                            "Sales_Jul_2015", 
+                            "Sales_Aug_2015", 
+                            "Sales_Sep_2015", 
+                            "Sales_Oct_2015", 
                             "Sales_Nov_2015",
                             "Sales_Dec_2015",
 # Single County
@@ -200,11 +196,11 @@ plt.show()
                             "Sales_Mar_2015",
                             "Sales_Apr_2015",
                             "Sales_May_2015",
-                            "Sales_Jun_2015",
-                            "Sales_Jul_2015",
-                            "Sales_Aug_2015",
-                            "Sales_Sep_2015",
-                            "Sales_Oct_2015",
+                            "Sales_Jun_2015", 
+                            "Sales_Jul_2015", 
+                            "Sales_Aug_2015", 
+                            "Sales_Sep_2015", 
+                            "Sales_Oct_2015", 
                             "Sales_Nov_2015",
                             "Sales_Dec_2015",
                             "Sales_Jan_2016",
@@ -254,7 +250,7 @@ print("Done")
 ```
 
     Done
-
+    
 
 
 ```python
@@ -272,7 +268,7 @@ Perform some exploratory statistical analysis and make some plots, such as histo
 import seaborn as sns
 import matplotlib.pyplot as plt
 #print(sales[sales["Year"]==2015]["Bottles Sold"].sum())
-
+      
 #pivot_table = pd.pivot_table(df, index=["County", "Category"], values = ["Bottles Sold"])
 
 # Single County
