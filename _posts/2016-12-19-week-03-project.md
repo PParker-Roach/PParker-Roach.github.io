@@ -2,8 +2,6 @@
 layout: post
 title: Week 3 Project Blog
 ---
-
-
 # Scenario 1: State tax board
 
 You are a data scientist in residence at the Iowa State tax board. The Iowa State legislature is considering changes in the liquor tax rates and wants a report of current liquor sales by county and projections for the rest of the year.
